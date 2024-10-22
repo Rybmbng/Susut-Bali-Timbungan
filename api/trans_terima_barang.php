@@ -131,6 +131,7 @@ $totalPages = ceil($totalItems / $itemsPerPage);
                 // $displayedDocNumbers = [];
                 while ($row = $result->fetch_assoc()) {
                     if (!in_array($row['NoDokumen'], $displayedDocNumbers)) {
+                        $displayedDocNumbers[] = $row['NoDokumen'];
                         echo '<tr>';
                         echo '<td class="py-2 px-4 border-b border-gray-300 text-center align-middle" rowspan="' . $row['item_count'] . '">' . htmlspecialchars($row['NoDokumen']) . '</td>';
                         echo '<td class="py-2 px-4 border-b border-gray-300 text-center align-middle" rowspan="' . $row['item_count'] . '">' . htmlspecialchars($row['TglDokumen']) . '</td>';
