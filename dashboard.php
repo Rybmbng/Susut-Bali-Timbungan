@@ -1,6 +1,6 @@
 <?php
 // dashboard.php
-include('./config/db.php');
+include('config/db.php');
 session_start();
 
 if (!isset($_SESSION['login_user'])) {
@@ -25,11 +25,11 @@ if ($result_top_items->num_rows > 0) {
     }
 } 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Dashboard</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
